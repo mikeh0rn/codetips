@@ -14,24 +14,28 @@
   </div>
   <% end %>
 
-  <p>
-    <%= f.label :language %><br>
-    <%= f.text_field :language %>
-  </p>
 
-  <p>
-    <%= f.label :topic %><br>
-    <%= f.text_field :topic %>
-  </p>
-
-  <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :language, class: "right inline" %>
+  </div>
+  <div class="small-9 columns"><%= f.text_field :language %></div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :topic, class: "right inline", title: "topic", data: {tooltip: true} %>
+  </div>
+  <div class="small-9 columns"><%= f.text_field :topic %></div>
+</div>
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label :tip, class: "right inline", title: "tip", data: {tooltip: true} %>
+  </div>
+  <div class="small-9 columns"><%= f.text_field :tip %></div>
+</div>
+<div class="row">
+  <div class="small-9 small-offset-3 columns"><%= submit_tag "SUBMIT", name: nil, class: "button radius" %></div>
+</div>
 <% end %>
 
-<%= link_to 'BACK', tips_path %>
+<%= link_to 'BACK', tips_path, class: "button secondary" %>
