@@ -25,7 +25,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
-
 gem 'foundation-rails'
 
 # Use ActiveModel has_secure_password
