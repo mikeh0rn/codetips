@@ -19,6 +19,21 @@ class TipsController < ApplicationController
     end
   end
 
+  def edit
+    @tip = Tip.find(params[:id])
+  end
+
+  def update
+    @tip = Tip.find(params[:id])
+      if @tip.update_attributes(tip_params)
+        redirect_to tips_path
+      else
+        render 'edit'
+      end
+  end
+
+
+
   private
     def tip_params
       params.require(:tip).permit :language, :topic, :text
