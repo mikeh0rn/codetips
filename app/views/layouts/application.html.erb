@@ -13,8 +13,32 @@
   </head>
 
   <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "CODE TIPS", root_path %></a></h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><%= link_to "All Code Tips", tips_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Add a Code Tip", new_tip_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Search Code Tips", root_path %></li>
+          <li class="divider"></li>
+          <li><%= link_to "Contact" %></li>
+        </ul>
+      </section>
+    </nav>
 
-    <%= yield %>
+    <div class="row">
+      <div class="large-8 columns"><%= yield %></div>
+      <div class="large-4 columns"></div>
+      <h2 class="subheader">About The Site</h2>
+      Code Tips was created to share a tweet-sized coding tip with the community or to search for one on your topic of your choice. Use the search bar on the left to find a tip on your area of struggle (i.e. Rails) or use the navigation bar above to check out all existing code tips.. Enjoy your experience!
+    </div>
 
   </body>
 </html>
