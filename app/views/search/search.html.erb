@@ -1,10 +1,10 @@
-<h1>Search for Code Tips!</h1>
+<h1>Get a Code Tip!</h1>
 
 <%= form_for search_path, method: :get do |f| %>
   <p>
     <%= f.label "Search for" %>
     <%= text_field_tag :q, params[:q] %>
-    <%= submit_tag "Go", name: nil %>
+    <%= submit_tag "GO!", name: nil, class: "button radius" %>
   </p>
 <% end %>
 
@@ -31,4 +31,4 @@
   <% end %>
 </ul>
 
-<%= link_to 'ADD A NEW CODE TIP!', new_tip_path %>
+<%= link_to 'ADD A NEW CODE TIP!', new_tip_path, class: "button info" %>
