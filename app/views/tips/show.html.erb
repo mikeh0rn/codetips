@@ -1,16 +1,16 @@
 <p>
-  <strong>Language:</strong>
+  <strong>Language:</strong><br>
   <%= @tip.language %>
 </p>
 
 <p>
-  <strong>Topic:</strong>
+  <strong>Topic:</strong><br>
   <%= @tip.topic %>
 </p>
 
 <p>
-  <strong>Text:</strong>
+  <strong>Code Tip:</strong><br>
   <%= @tip.text %>
 </p>
 
-<%= link_to 'BACK', tips_path %>
+<%= link_to 'BACK', tips_path, class: "button secondary" %>
