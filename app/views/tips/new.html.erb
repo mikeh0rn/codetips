@@ -1,0 +1,37 @@
+<h1>Add a Code Tip</h1>
+
+<%= form_for :tip, url: tips_path do |f| %>
+
+  <% if not @tip.nil? and @tip.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@tip.errors.count, "error") %> prohibited
+      this tip from being saved:</h2>
+    <ul>
+    <% @tip.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+  <p>
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </p>
+
+  <p>
+    <%= f.label :topic %><br>
+    <%= f.text_field :topic %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'BACK', tips_path %>
