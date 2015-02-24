@@ -21,6 +21,6 @@ class TipsController < ApplicationController
 
   private
     def tip_params
-      params.require(:tip).permit :title, :text
+      params.require(:tip).permit :language, :topic, :text
     end
 end
