@@ -20,7 +20,10 @@
     <div class="small-9 columns"><%= f.text_field :text %></div>
   </div>
   <div class="row">
-    <div class="small-9 small-offset-3 columns"><%= submit_tag "UPDATE", name: nil, class: "button radius" %></div>
+    <div class="small-9 small-offset-3 columns"><%= button_to "UPDATE", tips_path, method: :put, class: "button radius" %></div>
+  </div>
+  <div class="row">
+    <div class="small-9 small-offset-3 columns"><%= button_to"DELETE", tip_path, method: :delete, class: "button alert" %></div>
   </div>
   <div class="row">
     <div class="small-9 small-offset-3 columns"><%= link_to 'BACK', tips_path, class: "button secondary" %></div>
