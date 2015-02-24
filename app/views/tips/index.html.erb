@@ -1,0 +1,18 @@
+<h1>Tips</h1>
+
+<ul>
+  <% @tips.each do |tip| %>
+    <li>
+      <h3>
+        <%= tip.language %>
+      </h3>
+      <p>
+        <%= tip.topic %>
+      </p>
+      <p>
+        <%= tip.text %>
+      </p>
+    </li>
+  <% end -%>
+</ul>
+<%= link_to 'ADD A NEW CODE TIP!', new_tip_path %>
