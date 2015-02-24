@@ -1,18 +1,17 @@
-<h1>Tips</h1>
+<h1>All Code Tips</h1>
+<%= link_to 'ADD A NEW CODE TIP!', new_tip_path, class: "button info" %>
 
 <ul>
   <% @tips.each do |tip| %>
-    <li>
       <h3>
         <%= tip.language %>
       </h3>
-      <p>
-        <%= tip.topic %>
-      </p>
-      <p>
-        <%= tip.text %>
-      </p>
-    </li>
+      <h3>
+        <small>Topic: <%= tip.topic %></small>
+      </h3>
+      <h4>
+        <small>Code Tip:<br><%= tip.text %></small>
+      </h4>
+      <h3><%= link_to 'See Tip', :controller => "tips", :action => "show", :id => tip.id %></h3><br><br>
   <% end -%>
 </ul>
-<%= link_to 'ADD A NEW CODE TIP!', new_tip_path %>
