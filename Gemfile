@@ -39,7 +39,7 @@ gem 'bonsai-elasticsearch-rails'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'social-share-button', '~> 0.1.6'
+gem 'social-share-button', '~> 0.1.8', git: 'https://github.com/cuterxy/social-share-button.git'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
