@@ -13,5 +13,8 @@
   <%= @tip.text %>
 </p>
 
+<h1>Share This Code Tip on Facebook, Twitter or Google+</h1>
+<%= social_share_button_tag(@tip.text, :url => "http://codetips-app.herokuapp.com/tips/#{@tip.id}") %>
+
 <%= link_to 'EDIT', edit_tip_path, class: "button" %><br>
 <%= link_to 'BACK', tips_path, class: "button secondary" %>
